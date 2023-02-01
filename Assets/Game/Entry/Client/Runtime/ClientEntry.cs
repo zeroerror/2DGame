@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using GameArki.FreeInput;
 using GameArki.PlatformerCamera;
+using Game.CoreBattle;
 
 namespace Game.Client {
 
@@ -40,12 +41,20 @@ namespace Game.Client {
             if (getter.GetPressing(4)) {
                 horDir++;
             }
-            if (horDir != 0) {
-                role.Move(horDir);
-            }
+            role.Move(horDir);
             if (getter.GetDown(5)) {
                 role.Jump();
             }
+
+            // - Role State
+            bool isGrounded = false;
+            var fieldCollisionList = Game.CoreBattle.Util.PhysicsUtil.FetchCollisionExtraList_Field(role);
+            fieldCollisionList.ForEach((ce) => {
+                if (ce.fieldType == CoreBattle.Generic.FieldType.Ground) {
+                    isGrounded = true;
+                }
+            });
+            role.isGrounded = isGrounded;
         }
 
         float resTime;

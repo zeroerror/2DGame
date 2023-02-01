@@ -130,29 +130,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 383349854, guid: e64fd1ff0cf1f4e4ca30f31056bc9978, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.6452625
-      objectReference: {fileID: 0}
-    - target: {fileID: 383349854, guid: e64fd1ff0cf1f4e4ca30f31056bc9978, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 39.964317
-      objectReference: {fileID: 0}
-    - target: {fileID: 383349854, guid: e64fd1ff0cf1f4e4ca30f31056bc9978, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.3712
-      objectReference: {fileID: 0}
-    - target: {fileID: 400838554, guid: e64fd1ff0cf1f4e4ca30f31056bc9978, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 21.292845
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543771702, guid: e64fd1ff0cf1f4e4ca30f31056bc9978, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4563208937511253874, guid: e64fd1ff0cf1f4e4ca30f31056bc9978, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4563208937511253874, guid: e64fd1ff0cf1f4e4ca30f31056bc9978, type: 3}
       propertyPath: m_LocalPosition.x
@@ -281,7 +261,7 @@ Camera:
   m_GameObject: {fileID: 1046224777}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -324,15 +304,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6158511700947201765, guid: 93d6f793c70685648a57454719fb99c1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6158511700947201765, guid: 93d6f793c70685648a57454719fb99c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.75
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 6158511700947201765, guid: 93d6f793c70685648a57454719fb99c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.875
+      value: 4.625
       objectReference: {fileID: 0}
     - target: {fileID: 6158511700947201765, guid: 93d6f793c70685648a57454719fb99c1, type: 3}
       propertyPath: m_LocalPosition.z

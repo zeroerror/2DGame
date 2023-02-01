@@ -1,35 +1,37 @@
 using UnityEngine;
 
-public class RoleEntity : MonoBehaviour {
+namespace Game.CoreBattle {
 
-    LocomotionComponent lc;
-    public LocomotionComponent LC => lc;
+    public class RoleEntity : PhysicsEntity {
 
-    FSMComponent fsm;
-    public FSMComponent FSM => fsm;
+        LocomotionComponent lc;
+        public LocomotionComponent LC => lc;
 
-    BoxCollider2D boxCollider2D;
+        FSMComponent fsm;
+        public FSMComponent FSM => fsm;
 
-    public void Ctor() {
-        var rb = GetComponent<Rigidbody2D>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
-        lc = new LocomotionComponent();
-        lc.Ctor(rb);
-        fsm = new FSMComponent();
-    }
+        BoxCollider2D boxCollider2D;
 
-    public void Move(int horDir) {
-        lc.Move(horDir);
-    }
+        public bool isGrounded;
 
-    public void Jump() {
-        var pos = transform.position;
-        pos.y -= 0.01f;
-        if (Physics2D.Raycast(pos, Vector2.down, 0.01f)) {
-            lc.Jump();
+        public void Ctor() {
+            var rb = GetComponent<Rigidbody2D>();
+            boxCollider2D = GetComponent<BoxCollider2D>();
+            lc = new LocomotionComponent();
+            lc.Ctor(rb);
+            fsm = new FSMComponent();
         }
-    }
 
-    int count = 0;
+        public void Move(int horDir) {
+            lc.Move(horDir);
+        }
+
+        public void Jump() {
+            if (isGrounded) {
+                lc.Jump();
+            }
+        }
+
+    }
 
 }

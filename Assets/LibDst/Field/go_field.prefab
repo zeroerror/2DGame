@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1089702385768992460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4563208937511253874}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: go_field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
